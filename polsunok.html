@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="pstyle.css">
+<title>slider</title>
+</head>
+<div id='allprog'>
+<p><input type="range" min="0" max="30" id="polzun" 
+    oninput="sizePic()" value="15" >
+<input type="text" name="text" id="field"></p>
+    <p><div id="props"></div></p>
+    <script type="text/javascript">
+    	function sizePic() {
+    	var rang = document.getElementById('polzun');
+    	var div = document.getElementById('props'); 
+    	var style = div.style;
+    	if(rang.value <=6) {
+    		style.backgroundColor = "#040D40";
+    	}
+    	else if (rang.value>=7  && rang.value <=12) {
+    		style.backgroundColor = "#03318C";
+    	}
+
+        else if (rang.value>=13  && rang.value <=18) {
+            style.backgroundColor = "#0476D9";
+        }
+
+        else if (rang.value>=19  && rang.value <=24) {
+            style.backgroundColor = "#F2AB27";
+        }
+
+    	else if(rang.value>=25){
+    	style.backgroundColor = "#F23E16";
+    	}
+
+    	style.width = rang.value*5 +'px';
+
+        document.getElementById('field').value = rang.value;
+      
+        }
+
+    </script>
+</div>
+<body>
+</body>
+</html>
